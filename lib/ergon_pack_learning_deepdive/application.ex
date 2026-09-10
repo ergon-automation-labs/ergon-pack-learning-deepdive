@@ -13,7 +13,7 @@ defmodule ErgonPackLearningDeepdive.Application do
     children =
       if Application.get_env(:bot_army_library_runtime, :pack_mode, false) do
         [
-          {BotArmyRuntime.Health.Responder,
+          {BotArmyLibraryRuntime.Health.Responder,
            [bot_name: :learning_deepdive_pack, version: @version]}
         ]
       else
